@@ -15,18 +15,15 @@ const Header = () => {
           <h1
             className={`${quantico.variable} text-3xl font-bold text-[var(--accent)] select-none`}
           >
-            Booking App
+            Booking
           </h1>
         </a>
         <nav className="flex gap-4">
           <a href="/" className="nav-link">
             Home
           </a>
-          <a href="/about" className="nav-link">
-            About
-          </a>
-          <a href="/contact" className="nav-link">
-            Contact
+          <a href="/auth" className="nav-link">
+            Authorize
           </a>
         </nav>
       </div>

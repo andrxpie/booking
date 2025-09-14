@@ -65,7 +65,7 @@
 }
 
 .nav-link {
-  @apply hover:text-[var(--accent)] transition-all duration-200;
+  @apply hover:text-[var(--accent)] transition-all duration-200 not-first:border-l-4 border-[var(--accent)] pl-4;
 }
 
 body {
