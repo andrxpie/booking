@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${quantico.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${quantico.variable} antialiased scroll-[var(--accent)]`}
       >
         <Header />
         <div>{children}</div>
