@@ -6,7 +6,7 @@ export const metadata = {
 };
 
 export default function Home() {
-  const thumbnails = [
+  const slides = [
     { src: "/gallery-images/denver-thumbnail.jpg", alt: "Denver" },
     { src: "/gallery-images/denver-thumbnail.jpg", alt: "Denver" },
     { src: "/gallery-images/warsaw-thumbnail.jpg", alt: "Warsaw" },
@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <section className="w-full h-screen mt-16 border-4 border-b-0 border-[var(--accent)] flex flex-col">
       <h1 className="text-3xl text-center pt-14">Hello, Booking!</h1>
-      <Carousel images={thumbnails} />
+      <Carousel images={slides} />
       <main className="flex m-auto"></main>
     </section>
   );
