@@ -1,9 +1,26 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import clsx from "clsx";
 import Image from "next/image";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
+export function CarouselNavButton({
+  onClick,
+  children,
+}: {
+  onClick: () => void;
+  children: React.ReactNode;
+}) {
+  const navBtnClass =
+    "p-3 text-[var(--accent)] hover:text-[var(--background-dark)] duration-200 bg-gray-800 hover:bg-[var(--accent)] transition-all rounded-full opacity-0 bg-opacity-30 group-hover:opacity-100 hover:bg-opacity-50 cursor-pointer";
+
+  return (
+    <button onClick={onClick} className={navBtnClass}>
+      {children}
+    </button>
+  );
+}
 
 type Image = {
   src: string;
@@ -103,18 +120,12 @@ function Carousel({ images }: CarouselProps) {
 
       {/* Navigation Buttons */}
       <div className="absolute inset-y-0 flex items-center justify-between w-full px-6">
-        <button
-          onClick={handlePrev}
-          className="p-3 text-[var(--accent)] hover:text-[var(--background-dark)] duration-200 bg-gray-800 hover:bg-[var(--accent)] transition-all rounded-full opacity-0 bg-opacity-30 group-hover:opacity-100 hover:bg-opacity-50 cursor-pointer"
-        >
-          <FaChevronLeft size={20} />
-        </button>
-        <button
-          onClick={handleNext}
-          className="p-3 text-[var(--accent)] hover:text-[var(--background-dark)] duration-200 bg-gray-800 hover:bg-[var(--accent)] transition-all rounded-full opacity-0 bg-opacity-30 group-hover:opacity-100 hover:bg-opacity-50 cursor-pointer"
-        >
-          <FaChevronRight size={20} />
-        </button>
+        <CarouselNavButton onClick={handlePrev}>
+          <ChevronLeft strokeWidth={3} size={24} />
+        </CarouselNavButton>
+        <CarouselNavButton onClick={handleNext}>
+          <ChevronRight strokeWidth={3} size={24} />
+        </CarouselNavButton>
       </div>
     </div>
   );
