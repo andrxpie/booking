@@ -58,7 +58,7 @@ function RoomsListItem({ image, roomNumber, attributes }: RoomsListItemProps) {
       </div>
 
       {/* Details section */}
-      <section>
+      <section className="relative">
         <h2 className="font-bold py-3">{`Room ${roomNumber}`}</h2>
 
         {/* TODO: colorize attributes */}
@@ -106,6 +106,9 @@ function RoomsListItem({ image, roomNumber, attributes }: RoomsListItemProps) {
             vel.
           </p>
         </section>
+        <button className="absolute h-[30px] w-[100px] bottom-4 right-4 border-r-2 border-[var(--accent)] transition-all hover:bg-[var(--accent)] cursor-pointer">
+          View
+        </button>
       </section>
     </div>
   );
