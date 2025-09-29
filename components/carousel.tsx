@@ -13,7 +13,7 @@ export function CarouselNavButton({
   children: React.ReactNode;
 }) {
   const navBtnClass =
-    "p-3 text-[var(--accent)] hover:text-[var(--background-dark)] duration-200 bg-gray-800 hover:bg-[var(--accent)] transition-all rounded-full opacity-0 bg-opacity-30 group-hover:opacity-100 hover:bg-opacity-50 cursor-pointer";
+    "p-3 text-accent hover:text-primary duration-200 bg-gray-800 hover:bg-accent transition-all rounded-full opacity-0 bg-opacity-30 group-hover:opacity-100 hover:bg-opacity-50 cursor-pointer";
 
   return (
     <button onClick={onClick} className={navBtnClass}>

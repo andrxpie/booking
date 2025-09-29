@@ -14,7 +14,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[var(--background-light)] border-t-4 border-[var(--accent)] p-4 z-50">
+    <footer className="bg-secondary border-t-4 border-accent p-4 z-50">
       <div className="grid grid-cols-3 items-center">
         <h1
           className={`col-start-2 w-[fit-content] m-auto ${quantico.variable} text-xl font-bold text-center text-[#494949] cursor-pointer select-none`}

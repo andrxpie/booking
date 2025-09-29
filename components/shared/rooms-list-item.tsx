@@ -46,7 +46,7 @@ export type RoomsListItemProps = {
 
 function RoomsListItem({ image, roomNumber, attributes }: RoomsListItemProps) {
   return (
-    <div className="flex w-full max-h-[300px] gap-4 bg-[var(--background-light)] border-r-2 border-[var(--accent)] select-none">
+    <div className="flex w-full max-h-[300px] gap-4 bg-secondary border-r-2 border-accent select-none">
       <div className="aspect-square max-w-[300px] flex items-center justify-center group relative overflow-hidden cursor-pointer">
         <Image
           src={image}
@@ -69,7 +69,7 @@ function RoomsListItem({ image, roomNumber, attributes }: RoomsListItemProps) {
               className={`flex justify-between items-center pr-4 w-[220px] ${
                 (index + 1) % 3 === 0 || index === 5 || index === 6
                   ? ""
-                  : "border-r-2 border-[var(--accent)]"
+                  : "border-r-2 border-accent"
               }`}
             >
               <div className="flex items-center gap-2 text-white">
@@ -98,7 +98,7 @@ function RoomsListItem({ image, roomNumber, attributes }: RoomsListItemProps) {
             </div>
           ))}
         </section>
-        <section className="flex flex-col">
+        <section className="flex flex-col mr-2">
           <h2 className="font-bold pt-3">Description</h2>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam ad
@@ -106,7 +106,7 @@ function RoomsListItem({ image, roomNumber, attributes }: RoomsListItemProps) {
             vel.
           </p>
         </section>
-        <button className="absolute h-[30px] w-[100px] bottom-4 right-4 border-r-2 border-[var(--accent)] transition-all hover:bg-[var(--accent)] cursor-pointer">
+        <button className="absolute h-[30px] w-[100px] bottom-4 right-4 border-r-2 border-accent transition-all hover:bg-accent cursor-pointer">
           View
         </button>
       </section>
