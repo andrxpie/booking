@@ -27,7 +27,7 @@ const Header = () => {
               href={item.href}
               className={clsx(
                 "nav-link",
-                pathname === item.href ? "text-accent" : ""
+                pathname === item.href ? "text-accent font-bold" : ""
               )}
             >
               {item.name}

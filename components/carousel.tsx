@@ -3,32 +3,14 @@
 import { useState, useEffect } from "react";
 import clsx from "clsx";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
-export function CarouselNavButton({
-  onClick,
-  children,
-}: {
-  onClick: () => void;
-  children: React.ReactNode;
-}) {
-  const navBtnClass =
-    "p-3 text-accent hover:text-primary duration-200 bg-gray-800 hover:bg-accent transition-all rounded-full opacity-0 bg-opacity-30 group-hover:opacity-100 hover:bg-opacity-50 cursor-pointer";
-
-  return (
-    <button onClick={onClick} className={navBtnClass}>
-      {children}
-    </button>
-  );
-}
-
-type Image = {
+type ImageType = {
   src: string;
   alt: string;
 };
 
 type CarouselProps = {
-  images: Image[];
+  images: ImageType[];
 };
 
 function Carousel({ images }: CarouselProps) {
@@ -47,17 +29,9 @@ function Carousel({ images }: CarouselProps) {
     return () => clearInterval(interval);
   }, [totalImages, isHovered]);
 
-  const handlePrev = () => {
-    setActiveIndex((current) => (current - 1 + totalImages) % totalImages);
-  };
-
-  const handleNext = () => {
-    setActiveIndex((current) => (current + 1) % totalImages);
-  };
-
   return (
     <div
-      className="relative w-full max-w-4xl mx-auto overflow-hidden group"
+      className="relative w-[80%] mx-auto overflow-hidden group"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -78,12 +52,12 @@ function Carousel({ images }: CarouselProps) {
             opacityClass = "opacity-100 scale-100";
             zClass = "z-20";
           } else if (index === leftIndex) {
-            positionClass = "left-[25%] -translate-x-1/2";
+            positionClass = "left-[35%] -translate-x-1/2";
             widthClass = "w-[300px]";
             opacityClass = "opacity-50 scale-90";
             zClass = "z-10";
           } else if (index === rightIndex) {
-            positionClass = "left-[75%] -translate-x-1/2";
+            positionClass = "left-[65%] -translate-x-1/2";
             widthClass = "w-[300px]";
             opacityClass = "opacity-50 scale-90";
             zClass = "z-10";
@@ -109,7 +83,7 @@ function Carousel({ images }: CarouselProps) {
               <Image
                 src={image.src}
                 alt={image.alt}
-                className="object-cover w-full h-72 rounded-lg shadow-lg"
+                className="object-cover w-full h-72 rounded-lg shadow-lg select-none"
                 width={1920}
                 height={1080}
               />
@@ -118,14 +92,20 @@ function Carousel({ images }: CarouselProps) {
         })}
       </div>
 
-      {/* Navigation Buttons */}
-      <div className="absolute inset-y-0 flex items-center justify-between w-full px-6">
-        <CarouselNavButton onClick={handlePrev}>
-          <ChevronLeft strokeWidth={3} size={24} />
-        </CarouselNavButton>
-        <CarouselNavButton onClick={handleNext}>
-          <ChevronRight strokeWidth={3} size={24} />
-        </CarouselNavButton>
+      {/* Pagination Dots */}
+      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-3">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setActiveIndex(index)}
+            className={clsx(
+              "w-4 h-4 border-accent border-2 rounded-full transition-all duration-200 cursor-pointer",
+              index === activeIndex
+                ? "bg-accent"
+                : "bg-primary hover:bg-accent"
+            )}
+          />
+        ))}
       </div>
     </div>
   );

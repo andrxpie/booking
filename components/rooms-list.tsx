@@ -5,7 +5,7 @@ import {
 
 function RoomsList({ rooms }: { rooms: RoomsListItemProps[] }) {
   return (
-    <div className="flex flex-col mx-auto gap-4 my-4 w-[1000px]">
+    <div className="flex flex-col mx-auto gap-4 my-4 w-[60%]">
       {rooms.map((room, index) => (
         <RoomsListItem key={index} {...room} /> ))}
     </div>

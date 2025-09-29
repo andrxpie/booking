@@ -96,7 +96,7 @@ export default function Home() {
     <section className="w-full mt-16 flex flex-col">
       <h1 className="text-3xl text-center pt-14 hover:underline hover:text-accent cursor-pointer transition-all duration-100">Hello, Booking!</h1>
       <Carousel images={slides} />
-      <main className="flex flex-col m-auto w-[80%]">
+      <main className="flex flex-col m-auto w-[80%] mt-4">
         <RoomsList rooms={rooms} />
       </main>
     </section>

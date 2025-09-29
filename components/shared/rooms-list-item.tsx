@@ -106,7 +106,7 @@ function RoomsListItem({ image, roomNumber, attributes }: RoomsListItemProps) {
             vel.
           </p>
         </section>
-        <button className="absolute h-[30px] w-[100px] bottom-4 right-4 border-r-2 border-accent transition-all hover:bg-accent cursor-pointer">
+        <button className="absolute h-[30px] w-[100px] bottom-4 right-4 border-b-2 border-accent transition-all hover:font-bold hover:text-primary hover:bg-accent cursor-pointer">
           View
         </button>
       </section>
