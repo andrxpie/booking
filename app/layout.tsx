@@ -1,30 +1,25 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Playfair_Display, Roboto } from "next/font/google";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import { Quantico } from "next/font/google";
 import "./globals.css";
-
-const quantico = Quantico({
-  variable: "--font-quantico",
-  weight: ["400"],
-  subsets: ["latin"],
-});
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Booking",
   description: "A web-site for booking",
 };
+
+const playfairDisplay = Playfair_Display({
+  subsets: ["cyrillic"],
+  weight: ["400", "700"],
+  variable: "--font-playfair",
+});
+
+const roboto = Roboto({
+  subsets: ["cyrillic"],
+  weight: ["300", "400", "700"],
+  variable: "--font-roboto",
+});
 
 export default function RootLayout({
   children,
@@ -34,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${quantico.variable} antialiased`}
+        className={`${playfairDisplay.variable} ${roboto.variable} antialiased`}
       >
         <Header />
         {children}

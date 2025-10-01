@@ -21,72 +21,72 @@ const rooms: RoomsListItemProps[] = [
     image: "/assets/home-carousel-images/denver-thumbnail.jpg",
     roomNumber: "101",
     attributes: [
-      { attributeTypeId: 1, value: "True" },
-      { attributeTypeId: 2, value: "25m²" },
+      { attributeTypeId: 1, value: "25m²" },
+      { attributeTypeId: 2, value: "1 | 2" },
       { attributeTypeId: 3, value: "True" },
-      { attributeTypeId: 4, value: "False" },
-      { attributeTypeId: 5, value: "True" },
-      { attributeTypeId: 6, value: "1/2" },
+      { attributeTypeId: 4, value: "True" },
+      { attributeTypeId: 5, value: "False" },
+      { attributeTypeId: 6, value: "True" },
     ],
   },
   {
     image: "/assets/home-carousel-images/berlin-thumbnail.jpg",
     roomNumber: "201",
     attributes: [
-      { attributeTypeId: 1, value: "True" },
-      { attributeTypeId: 2, value: "25m²" },
+      { attributeTypeId: 1, value: "25m²" },
+      { attributeTypeId: 2, value: "1 | 2" },
       { attributeTypeId: 3, value: "True" },
-      { attributeTypeId: 4, value: "False" },
-      { attributeTypeId: 5, value: "True" },
-      { attributeTypeId: 6, value: "1/2" },
+      { attributeTypeId: 4, value: "True" },
+      { attributeTypeId: 5, value: "False" },
+      { attributeTypeId: 6, value: "True" },
     ],
   },
   {
     image: "/assets/home-carousel-images/warsaw-thumbnail.jpg",
     roomNumber: "301",
     attributes: [
-      { attributeTypeId: 1, value: "True" },
-      { attributeTypeId: 2, value: "25m²" },
+      { attributeTypeId: 1, value: "25m²" },
+      { attributeTypeId: 2, value: "1 | 2" },
       { attributeTypeId: 3, value: "True" },
-      { attributeTypeId: 4, value: "False" },
-      { attributeTypeId: 5, value: "True" },
-      { attributeTypeId: 6, value: "1/2" },
+      { attributeTypeId: 4, value: "True" },
+      { attributeTypeId: 5, value: "False" },
+      { attributeTypeId: 6, value: "True" },
     ],
   },
   {
     image: "/assets/home-carousel-images/denver-thumbnail.jpg",
     roomNumber: "101",
     attributes: [
-      { attributeTypeId: 1, value: "True" },
-      { attributeTypeId: 2, value: "25m²" },
+      { attributeTypeId: 1, value: "25m²" },
+      { attributeTypeId: 2, value: "1 | 2" },
       { attributeTypeId: 3, value: "True" },
-      { attributeTypeId: 4, value: "False" },
-      { attributeTypeId: 5, value: "True" },
-      { attributeTypeId: 6, value: "1/2" },
+      { attributeTypeId: 4, value: "True" },
+      { attributeTypeId: 5, value: "False" },
+      { attributeTypeId: 6, value: "True" },
     ],
   },
   {
     image: "/assets/home-carousel-images/berlin-thumbnail.jpg",
     roomNumber: "201",
     attributes: [
-      { attributeTypeId: 1, value: "True" },
-      { attributeTypeId: 2, value: "25m²" },
+      { attributeTypeId: 1, value: "25m²" },
+      { attributeTypeId: 2, value: "1 | 2" },
       { attributeTypeId: 3, value: "True" },
-      { attributeTypeId: 4, value: "False" },
-      { attributeTypeId: 5, value: "True" },
-      { attributeTypeId: 6, value: "1/2" },
+      { attributeTypeId: 4, value: "True" },
+      { attributeTypeId: 5, value: "False" },
+      { attributeTypeId: 6, value: "True" },
     ],
   },
   {
     image: "/assets/home-carousel-images/warsaw-thumbnail.jpg",
     roomNumber: "301",
     attributes: [
-      { attributeTypeId: 1, value: "True" },
-      { attributeTypeId: 2, value: "25m²" },
+      { attributeTypeId: 1, value: "25m²" },
+      { attributeTypeId: 2, value: "1 | 2" },
       { attributeTypeId: 3, value: "True" },
-      { attributeTypeId: 4, value: "False" },
-      { attributeTypeId: 5, value: "True" },
-      { attributeTypeId: 6, value: "1/2" },
+      { attributeTypeId: 4, value: "True" },
+      { attributeTypeId: 5, value: "False" },
+      { attributeTypeId: 6, value: "True" },
     ],
   },
 ];
@@ -94,7 +94,9 @@ const rooms: RoomsListItemProps[] = [
 export default function Home() {
   return (
     <section className="w-full mt-16 flex flex-col">
-      <h1 className="text-3xl text-center pt-14 hover:underline hover:text-accent cursor-pointer transition-all duration-100">Hello, Booking!</h1>
+      <h1 className="text-3xl text-center pt-14 hover:underline hover:text-accent cursor-pointer transition-all duration-100">
+        Hello, Booking!
+      </h1>
       <Carousel images={slides} />
       <main className="flex m-auto w-[80%] gap-4 mt-4">
         <div className="w-[20%] h-screen bg-secondary"></div>

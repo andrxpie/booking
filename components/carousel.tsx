@@ -13,6 +13,11 @@ type CarouselProps = {
   images: ImageType[];
 };
 
+// TODO:
+// add details for selected room [fill both sides],
+// make carousel linear angles, add bg-transparent for nav dots
+// and place them inside slide, then add nav buttons [around dots]
+
 function Carousel({ images }: CarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
@@ -100,9 +105,7 @@ function Carousel({ images }: CarouselProps) {
             onClick={() => setActiveIndex(index)}
             className={clsx(
               "w-4 h-4 border-accent border-2 rounded-full transition-all duration-200 cursor-pointer",
-              index === activeIndex
-                ? "bg-accent"
-                : "bg-primary hover:bg-accent"
+              index === activeIndex ? "bg-accent" : "bg-primary hover:bg-accent"
             )}
           />
         ))}

@@ -13,7 +13,7 @@ const Header = () => {
   const pathname = usePathname();
 
   return (
-    <header className="bg-secondary border-b-4 border-accent p-4 fixed top-0 left-0 w-full z-50">
+    <header className="bg-secondary border-b-4 border-accent p-4 top-0 left-0 w-full fixed font-playfair z-50">
       <div className="w-[80%] m-auto flex justify-between items-center">
         <Link href="/">
           <h1 className="text-3xl font-bold text-accent select-none outline-0">

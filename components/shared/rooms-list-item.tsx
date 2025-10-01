@@ -8,23 +8,23 @@ type Attribute = {
 const attributeTypes = [
   {
     id: 1,
-    icon: "/assets/icons/breakfast-icon.svg",
-    label: "Breakfast",
-  },
-  {
-    id: 2,
     icon: "/assets/icons/size-icon.svg",
     label: "Size м²",
   },
   {
+    id: 2,
+    icon: "/assets/icons/bed-icon.svg",
+    label: "Bed",
+  },
+  {
     id: 3,
-    icon: "/assets/icons/balcony-icon.svg",
-    label: "Balcony",
+    icon: "/assets/icons/breakfast-icon.svg",
+    label: "Breakfast",
   },
   {
     id: 4,
-    icon: "/assets/icons/shower-icon.svg",
-    label: "Shower",
+    icon: "/assets/icons/balcony-icon.svg",
+    label: "Balcony",
   },
   {
     id: 5,
@@ -33,8 +33,8 @@ const attributeTypes = [
   },
   {
     id: 6,
-    icon: "/assets/icons/bed-icon.svg",
-    label: "Bed",
+    icon: "/assets/icons/shower-icon.svg",
+    label: "Shower",
   },
 ];
 
@@ -46,14 +46,14 @@ export type RoomsListItemProps = {
 
 function RoomsListItem({ image, roomNumber, attributes }: RoomsListItemProps) {
   return (
-    <div className="flex w-full max-h-[300px] gap-4 bg-secondary border-r-2 border-accent select-none">
-      <div className="aspect-square max-w-[300px] flex items-center justify-center group relative overflow-hidden cursor-pointer">
+    <div className="flex w-full max-h-[300px] gap-4 bg-secondary border-r-2 border-accent select-none font-roboto">
+      <div className="aspect-video w-[fit-content] flex items-center justify-center group relative overflow-hidden cursor-pointer">
         <Image
           src={image}
           alt={`Room ${roomNumber}`}
-          width={1000}
-          height={1000}
-          className="object-cover w-full h-full transition-transform duration-700 ease-out group-hover:scale-110 group-hover:-translate-y-2 group-hover:translate-x-2"
+          width={1920}
+          height={1080}
+          className="object-cover w-full h-full transition-transform duration-300 ease-out group-hover:scale-110 group-hover:-translate-y-2 group-hover:translate-x-2"
         />
       </div>
 
